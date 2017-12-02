@@ -13,12 +13,6 @@ import 'react-dates/lib/css/_datepicker.css'
 
 const store = configureStore()
 
-const expenseOne = store.dispatch(addExpense({ description: 'Water bill', amount: 12050, createdAt: -11000 }))
-const expenseTwo = store.dispatch(addExpense({ description: 'Gas bill', amount: 1050, createdAt: 11010 }))
-const expenseThree = store.dispatch(addExpense({ description: 'Rent', amount: 150, createdAt: 0 }))
-
-store.dispatch(setTextFilter())
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
