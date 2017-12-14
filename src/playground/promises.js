@@ -1,24 +1,23 @@
 const promise = new Promise((res, rej) => {
   setTimeout(()=> {
-    rej('something went wrong')
+    //rej('something went wrong')
+    res('Resolved')
   },1500)
   
 })
 
-console.log('a')
+console.log('before')
 
 promise.then((data) => {
-  console.log(data)
-  console.log('c')
-}, (err)=>{
-  console.log('ayy ',err)
-})
+  console.log('1',data)
 
-promise.then((data) => {
-  console.log(data)
-  console.log('d')
+  return new Promise((res, rej) => {
+    setTimeout(()=> { res('Resolved from another promise')
+  },5000)})
+}).then((data) => {
+  console.log('here is the thing ',data)
 }).catch((err)=>{
-  console.log(err)
+  console.log('error: ',err)
 })
 
-console.log('b')
+console.log('after')

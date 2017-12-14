@@ -3,12 +3,12 @@ import * as firebase from 'firebase'
 import fixtures from '../tests/fixtures/expenses'
 
 const config = {
-  apiKey: "AIzaSyAoVR5Y_O4AROiCMNK9DRZnAH1dO2-rfe4",
-  authDomain: "xpenses-app-743ac.firebaseapp.com",
-  databaseURL: "https://xpenses-app-743ac.firebaseio.com",
-  projectId: "xpenses-app-743ac",
-  storageBucket: "xpenses-app-743ac.appspot.com",
-  messagingSenderId: "699810314283"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 }
 
 firebase.initializeApp(config)
