@@ -30,6 +30,9 @@ export { firebase, database as default }
 // database.ref('expenses').on('child_changed', snapshot => {
 //   console.log('changed:',snapshot.key, snapshot.val())
 // })
+
+
+
 // database.ref('expenses').on('value', (snapshot) => {
 //   const expenses = []
 

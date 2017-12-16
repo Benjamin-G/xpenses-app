@@ -57,3 +57,4 @@ test('should filter by date', () => {
   const result = selectExpenses(fixtures, filters)
   expect(result).toEqual([ fixtures[1] , fixtures[0] , fixtures[2] ]) 
 })
+
