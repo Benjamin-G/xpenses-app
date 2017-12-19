@@ -37,10 +37,11 @@ test('should remove expense from firebase', (done) => {
       id
     })
 
-    return database.ref(`expenses/${id}`).once('value')}).then((snapshot) => {
-      expect(snapshot.val()).toBeFalsy()
-      done()
-    })
+    return database.ref(`expenses/${id}`).once('value')
+  }).then((snapshot) => {
+    expect(snapshot.val()).toBeFalsy()
+    done()
+  })
 })
 
 test('should setup edit expense action object', () => {
@@ -66,10 +67,11 @@ test('should edit expense in firebase', (done) => {
       id,
       updates
     })
-    return database.ref(`expenses/${id}`).once('value')}).then((snapshot) => {
-      expect(snapshot.val().note).toBe(updates.note)
-      done()
-    })
+    return database.ref(`expenses/${id}`).once('value')
+  }).then((snapshot) => {
+    expect(snapshot.val().note).toBe(updates.note)
+    done()
+  })
 })
 
 test('should setup add expense action object with provided values', () => {
