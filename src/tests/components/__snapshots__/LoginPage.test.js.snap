@@ -21,6 +21,12 @@ exports[`should render Login Page correctly 1`] = `
     >
       Login with Google
     </button>
+    <button
+      className="button button--login"
+      onClick={[Function]}
+    >
+      Login with Facebook
+    </button>
   </div>
 </div>
 `;

@@ -42,7 +42,6 @@ exports[`should render ExpensesListFilters correctly 1`] = `
     >
       <withStyles(DateRangePicker)
         anchorDirection="left"
-        block={true}
         customArrowIcon={null}
         customCloseIcon={null}
         customInputIcon={null}
@@ -172,7 +171,6 @@ exports[`should render ExpensesListFilters with alt data correctly 1`] = `
     >
       <withStyles(DateRangePicker)
         anchorDirection="left"
-        block={true}
         customArrowIcon={null}
         customCloseIcon={null}
         customInputIcon={null}
