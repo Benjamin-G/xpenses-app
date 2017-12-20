@@ -154,7 +154,6 @@ test('should fetch the expenses from firebase', (done) => {
       type: 'SET_EXPENSES',
       expenses: fixtures
     })
-
     done()
   })
 })
