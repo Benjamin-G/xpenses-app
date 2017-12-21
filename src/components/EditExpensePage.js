@@ -2,16 +2,27 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import ExpenseForm from './ExpenseForm'
+import RemoveModal from './RemoveModal'
 import { startEditExpense , startRemoveExpense } from '../actions/expenses'
 
 export class EditExpensePage extends React.Component {
+  state = {
+    isModalOpen: false
+  }
   onSubmit = (expense) => {
     this.props.editExpense(this.props.expense.id, expense)
     this.props.history.push('/')
   }
-  onRemove = () =>{
+  openModal = () =>{
+    this.setState({isModalOpen: true})
+  }
+  handleConfirmedRemove = () => {
+    this.setState({isModalOpen: false})
     this.props.removeExpense({ id : this.props.expense.id })
     this.props.history.push('/')
+  }
+  handleDeniedRemove = () => {
+    this.setState({isModalOpen: false})
   }
 
   render() {
@@ -24,7 +35,10 @@ export class EditExpensePage extends React.Component {
         </div>
         <div className="content-container">
           <ExpenseForm expense={this.props.expense} onSubmit={this.onSubmit}/>
-          <button className="button button--secondary" onClick={this.onRemove}>Remove Expense</button>
+          
+          <button className="button button--secondary" onClick={this.openModal}>Remove Expense</button>
+          <RemoveModal isOpen={this.state.isModalOpen} onConfirmClose={this.handleConfirmedRemove}
+          onDenyClose={this.handleDeniedRemove} />
         </div>
       </div>
     )

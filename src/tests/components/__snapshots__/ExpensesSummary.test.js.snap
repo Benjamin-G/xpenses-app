@@ -16,11 +16,16 @@ exports[`should correctly render ExpensesSumary with 1 expense 1`] = `
       </span>
        
       expense
-       totalling 
+       totalling  
       <span>
         $1.23
       </span>
     </h1>
+    <div
+      className="page-header__subtitle"
+    >
+      <h3 />
+    </div>
     <div
       className="page-header__actions"
     >
@@ -52,11 +57,16 @@ exports[`should correctly render ExpensesSumary with many expense 1`] = `
       </span>
        
       expenses
-       totalling 
+       totalling  
       <span>
         $123.45
       </span>
     </h1>
+    <div
+      className="page-header__subtitle"
+    >
+      <h3 />
+    </div>
     <div
       className="page-header__actions"
     >
